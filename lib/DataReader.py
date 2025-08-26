@@ -10,7 +10,7 @@ def read_customers(spark,env):
     customers_file_path = conf["customers.file.path"]
     return spark.read\
         .format("csv")\
-        .option("header","true")\
+        .option("header", "true")\
         .schema(get_customers_schema())\
         .load(customers_file_path)
     
@@ -25,6 +25,6 @@ def read_orders(spark,env):
     orders_file_path=conf["orders.file.path"]
     return spark.read\
            .format("csv")\
-           .option("header","true")\
+           .option("header", "true")\
            .schema(get_orders_schema())\
             .load(orders_file_path)
