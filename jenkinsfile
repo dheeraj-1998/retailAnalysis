@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     // Install your project dependencies (e.g., requirements.txt or Pipfile)
-                    sh './retail_pipeline_venv/bin/pipenv install'
+                    sh './retail_pipeline_venv/bin/pipenv install pytest pyspark'
                 }
             }
         }
