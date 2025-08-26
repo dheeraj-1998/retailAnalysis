@@ -33,7 +33,7 @@ pipeline {
                     // Ensure JAVA_HOME is set for PySpark to work
                     sh 'echo $JAVA_HOME'
                     sh 'echo $PATH'
-                    
+                    sh 'echo "nothing"'
                     // Run tests (assuming you are using pytest for tests)
                     sh './retail_pipeline_venv/bin/pipenv run pytest'
                 }
